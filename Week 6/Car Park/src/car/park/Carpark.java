@@ -28,7 +28,7 @@ public class Carpark {
         return false; 
     }
     
-        public boolean removeCar (int regnum){
+        public boolean removeCar (String regnum){
         for (int i = 0; i < Carinto.length;i++){
             if (Carinto[i] != null){
               int passID = Carinto[i].getId();

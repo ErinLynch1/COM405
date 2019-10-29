@@ -18,6 +18,8 @@ public class MainMenu {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        
+        Carpark CP = new Carpark (); 
         int state = 1;
         Scanner scanIn = new Scanner(System.in);
         while (state == 1) {
@@ -33,18 +35,27 @@ public class MainMenu {
                 System.out.println("Please enter the registration number to add: ");
                 String regnum = null; 
                 regnum = scanIn.nextLine();
-                System.out.println("The car with the reg " + regnum + " has been added to the car park"); 
+                if (CP.addCar(new Car(1,regnum))){
+                System.out.println("The car with the reg " + regnum + " has been added to the car park");
+                }else{
+                System.out.println("the bus is full");
+                } 
             } else if ("b".equals(input)) {
                 System.out.println("Please enter the registration number to remove: ");
                 String regnum = null; 
                 regnum = scanIn.nextLine();
+                if (CP.removeCar(regnum)){
+                System.out.println("The car with the reg " + regnum + " has been remove to the car park");
+                }else{
+                System.out.println("The car is not in the car park");
+                } 
                 System.out.println("The car with the reg " + regnum + " has been remove to the car park"); 
-            } else if ("c".equals(input)) {
-                System.out.println("The number of spaces available are");
-            } else if ("x".equals(input)) {
+                } else if ("c".equals(input)) {
+                System.out.println("The number of spaces available are" + CP.NumSpaces());
+                } else if ("x".equals(input)) {
                 state=0;
                 System.out.println("You have exited the program");
-            }
+                }
 
         }
         scanIn.close();
