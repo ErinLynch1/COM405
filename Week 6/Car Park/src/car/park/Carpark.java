@@ -31,8 +31,8 @@ public class Carpark {
         public boolean removeCar (String regnum){
         for (int i = 0; i < Carinto.length;i++){
             if (Carinto[i] != null){
-              int passID = Carinto[i].getId();
-                if (passID == regnum){
+              String carID = Carinto[i].getRegnum();
+                if (carID.equals(regnum)){
                     Carinto[i] = null;
                     return true;   
                 }
@@ -76,6 +76,17 @@ public class Carpark {
         for (Car Carinto1 : Carinto) {
             if (Carinto1 != null) {
                 tally++;
+            }
+        }
+             return tally;
+            }
+            
+            public int RemainSpaces(){
+                int tally = 15; 
+        /*if seat is not null then system print out the total number of passengers on this bus are the total array - the number of seats that are not null*/
+        for (Car Carinto1 : Carinto) {
+            if (Carinto1 != null) {
+                tally--;
             }
         }
              return tally;

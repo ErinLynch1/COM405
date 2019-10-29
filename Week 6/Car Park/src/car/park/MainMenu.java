@@ -31,16 +31,16 @@ public class MainMenu {
 
             String input = scanIn.nextLine();
 
-            if ("a".equals(input)) {
+            if ("A".equals(input)) {
                 System.out.println("Please enter the registration number to add: ");
                 String regnum = null; 
                 regnum = scanIn.nextLine();
                 if (CP.addCar(new Car(1,regnum))){
                 System.out.println("The car with the reg " + regnum + " has been added to the car park");
                 }else{
-                System.out.println("the bus is full");
+                System.out.println("The car park is full");
                 } 
-            } else if ("b".equals(input)) {
+            } else if ("B".equals(input)) {
                 System.out.println("Please enter the registration number to remove: ");
                 String regnum = null; 
                 regnum = scanIn.nextLine();
@@ -48,15 +48,14 @@ public class MainMenu {
                 System.out.println("The car with the reg " + regnum + " has been remove to the car park");
                 }else{
                 System.out.println("The car is not in the car park");
-                } 
-                System.out.println("The car with the reg " + regnum + " has been remove to the car park"); 
-                } else if ("c".equals(input)) {
-                System.out.println("The number of spaces available are" + CP.NumSpaces());
-                } else if ("x".equals(input)) {
+                }
+                } else if ("C".equals(input)) {
+                System.out.println("The number of spaces that are full are " + CP.NumSpaces());
+                System.out.println("The number of spaces that are remaining are " + CP.RemainSpaces());
+                } else if ("X".equals(input)) {
                 state=0;
                 System.out.println("You have exited the program");
                 }
-
         }
         scanIn.close();
     }
