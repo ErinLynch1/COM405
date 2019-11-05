@@ -41,7 +41,7 @@ public class Carpark {
         return false; 
     }
         
-    public Car getPassenger(int id){
+    public Car getCar(int id){
         for (int i = 0; i < Carinto.length;i++){
             if (Carinto[i] != null){
               int passID = Carinto[i].getId();
@@ -83,7 +83,6 @@ public class Carpark {
             
             public int RemainSpaces(){
                 int tally = 15; 
-        /*if seat is not null then system print out the total number of passengers on this bus are the total array - the number of seats that are not null*/
         for (Car Carinto1 : Carinto) {
             if (Carinto1 != null) {
                 tally--;
