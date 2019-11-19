@@ -10,10 +10,10 @@ package employee.system;
  * @author 3lynce57
  */
 public class Employee {
-    private String name; 
-    private double pay; 
-    private int hours;
-    private int holiday; 
+    protected String name; 
+    protected double pay; 
+    protected int hours;
+    protected int holiday; 
     
     public Employee (String nameIn, double payIn, int hoursIn, int holidayIn){
         name = nameIn;
@@ -22,49 +22,49 @@ public class Employee {
         holiday = holidayIn; 
     }
     
-    private String getName(){
+    public String getName(){
         return name; 
     }
-    private double getPay(){
+    public double getPay(){
         return pay; 
     }
-    private double getHours(){
+    public double getHours(){
         return hours; 
     }
-    private int getHoliday(){
+    public int getHoliday(){
         return holiday;
     }
           
-    private double changePay(){
+    public double changePay(){
         double newPay= 0; 
         if (hours > 40) {
             System.out.println("You are working too many hours, so your pay will not increase");
         }else if (hours >= 35){
-            System.out.println("You are working the right amount of hours. Your pay will now increase" + newPay);
+            System.out.println("You are working the right amount of hours. Your pay will now increase " + newPay);
             newPay = pay + (pay/5); 
         }else if (hours >= 30){
-            System.out.println("You have worked well. Your pay will now increase" + newPay);
+            System.out.println("You have worked well. Your pay will now increase to " + newPay);
             newPay = pay + (pay/10); 
         }else if(hours >= 25){
-            System.out.println("You have worked well. Your pay will now increase " + newPay);
+            System.out.println("You have worked well. Your pay will now increase to " + newPay);
             newPay = pay + (pay/15); 
         }
         else if(hours >= 20){
-            System.out.println("You have worked well. Your pay will now increase" + newPay);
             newPay = pay + (pay/10); 
+            System.out.println("You have worked well. Your pay will now increase to " + newPay);
         }
         else if(hours >= 15){
-            System.out.println("You have worked well. Your pay will now increase" + newPay);
+            System.out.println("You have worked well. Your pay will now increase to " + newPay);
             newPay = pay + (pay/5); 
         }
         else if(hours >= 10){
-            System.out.println("You have worked well. Your pay will now increase" + newPay);
+            System.out.println("You have worked well. Your pay will now increase to " + newPay);
             newPay = pay + (pay/2.5); 
         }else if(hours < 10){
             System.out.println("You are not working enough hours, so your pay will not change");
         }return pay;
     }
-    private int changeHours(){
+    public int changeHours(){
         int newhours = 0; 
         if (hours > 40) {
             System.out.println("You need to reduce your hours as you are working too many");
@@ -92,24 +92,23 @@ public class Employee {
             System.out.println("You are not working enough hours, so you no longer work for us");
         }return hours; 
     }
-    private double viewSalary(){
+    public double viewSalary(){
         {
         System.out.println("Your yearly salary is" + pay);
         }return pay; 
     }
-    private int bookHoliday(){
-        boolean bookHoliday;
+    public int bookHoliday(){
+        boolean bookHoliday = true;
         
         if (bookHoliday){
-            System.out.println("hello world");
+            holiday--;  
         }return holiday;
     }
-    private String employeeDetails(){
-        {
+    public String employeeDetails(){
         System.out.println("Name: " + name + "\n"
                             + "Hours: " + hours + "\n"
                             + "Pay: " + pay + "\n"
                             + "Holiday: " + holiday + "\n");
-    }return null;
+    return null;
    }
 }

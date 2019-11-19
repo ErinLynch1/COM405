@@ -16,7 +16,10 @@ public class FrontLineStaff extends Employee{
         super (nameIn,payIn,hoursIn,holidayIn);
     }
     
-    public void viewSalary(){
-        
+    @Override
+    public double viewSalary(){
+        System.out.println("Your yearly salary is " + pay * 52);
+        return 0;      
     }
+        
 }

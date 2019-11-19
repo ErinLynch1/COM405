@@ -11,4 +11,10 @@ package employee.system;
  */
 public class Managers extends Employee {
     
+    public Managers(String nameIn, double payIn, int hoursIn, int holidayIn){
+   
+        super (nameIn,payIn,hoursIn,holidayIn);
+    }
+ 
 }
+    
