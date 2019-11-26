@@ -19,7 +19,7 @@ public class FrontLineStaff extends Employee{
     @Override
     public double viewSalary(){
         System.out.println("Your yearly salary is " + pay * 52);
-        return 0;      
+        return pay;      
     }
         
 }

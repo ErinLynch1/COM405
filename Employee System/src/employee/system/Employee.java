@@ -9,7 +9,7 @@ package employee.system;
  *
  * @author 3lynce57
  */
-public class Employee {
+public abstract class Employee {
     protected String name; 
     protected double pay; 
     protected int hours;
@@ -109,6 +109,7 @@ public class Employee {
                             + "Hours: " + hours + "\n"
                             + "Pay: " + pay + "\n"
                             + "Holiday: " + holiday + "\n");
-    return null;
+        
+        return null;
    }
 }

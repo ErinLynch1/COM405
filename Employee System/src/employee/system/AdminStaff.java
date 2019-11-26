@@ -30,6 +30,6 @@ public class AdminStaff extends Employee {
                             + "Pay: " + pay + "\n"
                             + "Holiday: " + holiday + "\n"
                             + "Manager: " + Manager);
-        return null;
+        return Manager;
     }
 }

@@ -25,6 +25,8 @@ public class EmployeeSystem {
         f1.changePay();
         
         System.out.println(f1.viewSalary());
+        System.out.println(A1.employeeDetails());
+        System.out.println(M1.employeeDetails());
     }
     
 }
